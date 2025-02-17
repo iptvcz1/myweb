@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>民国时期物品颜色编码管理系统</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 标题与Logo区域：平行居中 -->
+  <div id="header">
+    <img src="images/logo.png" alt="Logo" id="siteLogo">
+    <h1>民国时期物品颜色编码管理系统</h1>
+  </div>
+
+  <!-- 登录系统：右上角固定容器 -->
+  <div id="loginContainer">
+    <button class="login-button" onclick="toggleLogin()">
+      <img src="images/feiyan.png" alt="飞檐">
+    </button>
+    <div class="login-panel" id="loginPanel">
+      <h2>管理员登录</h2>
+      <input type="text" id="username" placeholder="用户名">
+      <input type="password" id="password" placeholder="密码">
+      <button onclick="login()">登录</button>
+    </div>
+  </div>
+
+  <!-- 用户界面 -->
+  <div id="userPanel">
+    <table id="itemTable">
+      <!-- 表格内容由 JavaScript 动态生成 -->
+    </table>
+  </div>
+
+  <!-- 管理员操作面板 -->
+  <div class="admin-panel" id="adminPanel">
+    <h2>管理员操作面板</h2>
+    <div class="admin-form">
+      <h3>设置Logo</h3>
+      <input type="file" id="logoUpload" accept="image/*">
+      <button onclick="uploadLogo()">上传Logo</button>
+    </div>
+    <div class="admin-form">
+      <h3>添加新物品</h3>
+      <input type="text" id="newItemCategory" placeholder="分类名称">
+      <input type="text" id="newItemColor" placeholder="颜色代码">
+      <input type="text" id="newItemName" placeholder="物品名称">
+      <input type="text" id="newItemDescription" placeholder="物品描述">
+      <input type="file" id="newItemImage" accept="image/*">
+      <button onclick="addItem()">添加</button>
+    </div>
+    <div class="admin-form">
+      <h3>修改物品信息</h3>
+      <input type="text" id="editItemId" placeholder="物品ID">
+      <input type="text" id="editColorCode" placeholder="新颜色代码">
+      <input type="text" id="editItemName" placeholder="新物品名称">
+      <button onclick="editItem()">修改</button>
+    </div>
+    <div class="admin-form">
+      <h3>导入物品数据</h3>
+      <input type="file" id="xlsFile" accept=".xls,.xlsx">
+      <button onclick="importData()">导入</button>
+      <p>请使用以下模板导入物品数据：</p>
+      <a href="templates/item-template.xls" download>点击下载导入模板</a>
+    </div>
+    <button onclick="goBackToHome()">返回主页</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

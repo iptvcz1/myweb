@@ -1,0 +1,168 @@
+﻿/* 使用民国风格的字体和配色 */
+body {
+  font-family: "KaiTi", "仿宋", serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f3e9;
+  color: #333;
+  position: relative;
+}
+
+/* 标题与Logo区域：平行居中 */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 让标题居中 */
+  position: relative; /* 用于 logo 绝对定位 */
+}
+
+#siteLogo {
+  position: absolute;
+  left: 30px; /* 让 Logo 靠左 */
+  max-height: 80px;
+}
+
+#header h1 {
+  font-size: 42px;
+  color: #8B4513;
+  margin-right: 20px;
+}
+
+/* 登录系统整体容器：固定在右上角 */
+#loginContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-align: right;
+}
+
+/* 登录按钮使用本地飞檐图替换文字 */
+.login-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+.login-button img {
+  width: 100px; /* 根据需要调整尺寸 */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.login-button:hover img {
+  transform: scale(1.1);
+}
+
+/* 登录面板 */
+.login-panel {
+  display: none;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.login-panel input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.login-panel button {
+  padding: 8px 12px;
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-panel button:hover {
+  background-color: #A0522D;
+}
+
+/* 表格样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #8B4513;
+  color: white;
+}
+.color-block {
+  width: 60px;
+  height: 30px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.color-block:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+/* 管理员操作面板 */
+.admin-panel {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.admin-panel.active {
+  display: block;
+}
+.admin-form {
+  margin-bottom: 20px;
+}
+.admin-form input {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.admin-form button {
+  padding: 8px 12px;
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.admin-form button:hover {
+  background-color: #A0522D;
+}
+.item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #A0522D;
+}
+
+.admin-form {
+  margin-bottom: 20px;
+}
